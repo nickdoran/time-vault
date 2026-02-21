@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 const team = [
   { name: "Nicklas Doran", email: "doranni4@msu.edu", role: "Co-Founder" },
   { name: "Tamer Bazzi", email: "bazzitam@msu.edu", role: "Co-Founder" },
-  { name: "Saanj Bhakta", email: "bhaktasa@msu.edu", role: "Co-Founder" },
+{ name: "Saanj Bhakta", email: "bhaktasa@msu.edu", role: "Co-Founder" },
   { name: "Yuliia Mykhailenko", email: "mykhaile@msu.edu", role: "Co-Founder" },
   { name: "Nate Laughton", email: "natelaughton@gmail.com", role: "Co-Founder" },
   { name: "Rithvik Gopalsamy", email: "rithvikg007@gmail.com", role: "Co-Founder" },
