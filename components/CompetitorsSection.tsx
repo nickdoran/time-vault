@@ -1,7 +1,7 @@
 const competitors = [
   {
     name: "WOLF The Rocket",
-    price: "$150–$350",
+    price: "$689",
     selfWinding: true,
     gps: false,
     fingerprint: false,
