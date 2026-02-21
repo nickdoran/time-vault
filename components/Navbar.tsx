@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
@@ -17,9 +18,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 border border-vault-gold flex items-center justify-center">
-            <span className="text-vault-gold font-serif text-sm font-bold">T</span>
-          </div>
+          <Image
+            src="/timevault.png"
+            alt="Time Vault"
+            width={36}
+            height={36}
+            className="object-contain"
+          />
           <span className="font-serif text-xl tracking-widest text-vault-text group-hover:text-vault-gold transition-colors">
             TIME VAULT
           </span>
