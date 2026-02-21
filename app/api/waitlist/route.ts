@@ -4,7 +4,7 @@ import { getSupabaseClient } from "@/lib/supabase";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { firstName, lastName, email } = body;
+    const { firstName, lastName, email, isGift } = body;
 
     // Validate inputs
     if (!firstName?.trim() || !lastName?.trim() || !email?.trim()) {
@@ -29,6 +29,7 @@ export async function POST(request: NextRequest) {
       first_name: firstName.trim(),
       last_name: lastName.trim(),
       email: email.trim().toLowerCase(),
+      is_gift: isGift === true,
     });
 
     if (error) {

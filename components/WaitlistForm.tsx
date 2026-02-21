@@ -11,10 +11,12 @@ export default function WaitlistForm() {
     firstName: "",
     lastName: "",
     email: "",
+    isGift: false,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFields((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value, type, checked } = e.target;
+    setFields((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -33,7 +35,7 @@ export default function WaitlistForm() {
 
       if (res.ok) {
         setFormState("success");
-        setFields({ firstName: "", lastName: "", email: "" });
+        setFields({ firstName: "", lastName: "", email: "", isGift: false });
       } else if (res.status === 409) {
         setFormState("error");
         setErrorMessage("This email is already on our waitlist. We'll be in touch!");
@@ -133,6 +135,32 @@ export default function WaitlistForm() {
           disabled={formState === "loading"}
         />
       </div>
+
+      <label className="flex items-center gap-3 cursor-pointer group">
+        <div className="relative flex-shrink-0">
+          <input
+            type="checkbox"
+            name="isGift"
+            checked={fields.isGift}
+            onChange={handleChange}
+            disabled={formState === "loading"}
+            className="sr-only peer"
+          />
+          <div className="w-5 h-5 border border-vault-border bg-vault-black peer-checked:border-vault-gold transition-colors" />
+          <svg
+            className="absolute inset-0 w-5 h-5 p-0.5 text-vault-gold opacity-0 peer-checked:opacity-100 transition-opacity"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2.5}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <span className="text-vault-muted text-sm group-hover:text-vault-text transition-colors">
+          This is a gift for someone special
+        </span>
+      </label>
 
       {formState === "error" && (
         <div className="border border-red-800/50 bg-red-950/20 p-4">
