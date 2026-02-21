@@ -3,7 +3,7 @@ const steps = [
     step: "01",
     title: "Place Your Watch",
     description:
-      "Open Time Vault with your fingerprint. Nestle your watch into the cork-lined interior. The fit is tailored for all standard watch sizes.",
+      "Open Time Vault with your fingerprint. Nestle your watch into the velvet-lined interior. The fit is tailored for all standard watch sizes.",
   },
   {
     step: "02",

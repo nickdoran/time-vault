@@ -59,7 +59,7 @@ export default function WaitlistPage() {
                   { label: "Form", value: "Cylinder" },
                   { label: "Security", value: "Fingerprint + GPS" },
                   { label: "Winding", value: "Auto Self-Wind" },
-                  { label: "Layers", value: "3 Premium" },
+                  { label: "Layers", value: "4 Premium" },
                   { label: "Hidden", value: "Secret Stash" },
                 ].map((spec) => (
                   <div key={spec.label}>

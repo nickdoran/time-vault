@@ -20,11 +20,20 @@ const layers = [
   {
     number: "03",
     material: "Natural Cork",
-    role: "Inner Cushion",
+    role: "Shock Absorber",
     description:
-      "Sustainably sourced cork lines the interior, cradling your watch in a naturally anti-microbial, shock-absorbing embrace that won't scratch delicate cases.",
+      "Sustainably sourced cork forms the mid-interior layer — naturally anti-microbial and shock-absorbing, it cushions your watch against impacts before it ever reaches the surface.",
     color: "#C8A880",
     texture: "Cork",
+  },
+  {
+    number: "04",
+    material: "Soft Velvet",
+    role: "Inner Lining",
+    description:
+      "The innermost layer your watch actually touches. Plush velvet provides a whisper-soft surface that protects delicate case finishes and crystal from any contact scratches.",
+    color: "#3B1F4E",
+    texture: "Velvet",
   },
 ];
 
@@ -37,22 +46,22 @@ export default function LayersSection() {
           <p className="text-vault-gold text-xs tracking-[0.4em] uppercase mb-4">
             Material Excellence
           </p>
-          <h2 className="section-heading">Three Layers. One Purpose.</h2>
+          <h2 className="section-heading">Four Layers. One Purpose.</h2>
           <span className="gold-line" />
           <p className="text-vault-muted max-w-xl mx-auto text-base leading-relaxed">
             Like a great timepiece itself, every component has a reason to exist.
-            Three materials, each selected for its unique properties.
+            Four materials, each selected for its unique properties.
           </p>
         </div>
 
         {/* Layers */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-vault-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-vault-border">
           {layers.map((layer, index) => (
             <div
               key={layer.number}
               className={`relative p-10 group ${
                 index < layers.length - 1
-                  ? "md:border-r border-b md:border-b-0 border-vault-border"
+                  ? "lg:border-r border-b lg:border-b-0 border-vault-border md:border-r-0 md:border-b"
                   : ""
               } hover:bg-vault-card transition-colors duration-300`}
             >

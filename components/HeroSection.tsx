@@ -40,7 +40,7 @@ export default function HeroSection() {
         <p className="text-vault-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
           The world&apos;s first portable watch case with fingerprint security,
           GPS tracking, and automatic self-winding. Crafted in leather, stainless
-          steel, and cork — engineered for the modern collector.
+          steel, cork, and velvet — engineered for the modern collector.
         </p>
 
         {/* Price tag */}
@@ -61,7 +61,7 @@ export default function HeroSection() {
         {/* Stats */}
         <div className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto border-t border-vault-border pt-10">
           {[
-            { value: "3", label: "Premium Layers" },
+            { value: "4", label: "Premium Layers" },
             { value: "360°", label: "Self-Winding" },
             { value: "GPS", label: "Real-Time Tracking" },
           ].map((stat) => (
